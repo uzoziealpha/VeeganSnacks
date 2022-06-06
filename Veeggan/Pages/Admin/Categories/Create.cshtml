@@ -1,0 +1,52 @@
+﻿@page
+@model Veeggan.Pages.Admin.Categories.CreateModel
+
+<!--This is a FORM page can be linked to Categories so the button can work-->
+
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Create Category</h2>
+            <hr/>
+        </div>
+
+        <!--Creating custom validations-->
+        <div asp-validation-summary="All"></div>
+
+        <div class="mb-3">
+            <label asp-for="Category.Name"></label>
+            <input asp-for="Category.Name" class="form-control"/>
+
+            <!--Running server side from validations-->
+            <!--we add the validations so user knows when something need to be fixed-->
+            <span asp-validation-for="Category.Name" class="text-danger"></span>
+
+        </div>
+         <div class="mb-3">
+            <label asp-for="Category.DisplayOrder"></label>
+            <input asp-for="Category.DisplayOrder" class="form-control"/>
+
+            <!--we add the validations so user knows when something need to be fixed-->
+            <!-- The validation is from server side because when you refresh the button you will see a relaod in the browser.-->
+            <span asp-validation-for="Category.DisplayOrder" class="text-danger"></span>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+
+        <!--TAG HELPER TO CHANGE PAGE BACK TO LIST-->
+        <a asp-page="Index" class="btn btn-info" style="width:150px;"> Back To List </a>
+    </div>
+</form>
+
+
+
+
+<!--We use the partial view from partials folder for client side validation means it will not reload -->
+<!-- Razor pages an handle JS and C# -->
+@section Scripts{
+    @{
+    <partial name="_ValidationScriptsPartial"/>
+    }
+}

@@ -1,0 +1,17 @@
+C:\Users\Sirine\source\repos\Veeggan\Veegan.Data.Access\bin\Debug\net6.0\Veegan.Data.Access.deps.json
+C:\Users\Sirine\source\repos\Veeggan\Veegan.Data.Access\bin\Debug\net6.0\Veegan.Data.Access.dll
+C:\Users\Sirine\source\repos\Veeggan\Veegan.Data.Access\bin\Debug\net6.0\Veegan.Data.Access.pdb
+C:\Users\Sirine\source\repos\Veeggan\Veegan.Data.Access\bin\Debug\net6.0\Vegan.Models.dll
+C:\Users\Sirine\source\repos\Veeggan\Veegan.Data.Access\bin\Debug\net6.0\Vegan.Models.pdb
+C:\Users\Sirine\source\repos\Veeggan\Veegan.Data.Access\obj\Debug\net6.0\Veegan.Data.Access.csproj.AssemblyReference.cache
+C:\Users\Sirine\source\repos\Veeggan\Veegan.Data.Access\obj\Debug\net6.0\Veegan.Data.Access.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sirine\source\repos\Veeggan\Veegan.Data.Access\obj\Debug\net6.0\Veegan.Data.Access.AssemblyInfoInputs.cache
+C:\Users\Sirine\source\repos\Veeggan\Veegan.Data.Access\obj\Debug\net6.0\Veegan.Data.Access.AssemblyInfo.cs
+C:\Users\Sirine\source\repos\Veeggan\Veegan.Data.Access\obj\Debug\net6.0\Veegan.Data.Access.csproj.CoreCompileInputs.cache
+C:\Users\Sirine\source\repos\Veeggan\Veegan.Data.Access\obj\Debug\net6.0\Veegan.Data.Access.csproj.CopyComplete
+C:\Users\Sirine\source\repos\Veeggan\Veegan.Data.Access\obj\Debug\net6.0\Veegan.Data.Access.dll
+C:\Users\Sirine\source\repos\Veeggan\Veegan.Data.Access\obj\Debug\net6.0\refint\Veegan.Data.Access.dll
+C:\Users\Sirine\source\repos\Veeggan\Veegan.Data.Access\obj\Debug\net6.0\Veegan.Data.Access.pdb
+C:\Users\Sirine\source\repos\Veeggan\Veegan.Data.Access\obj\Debug\net6.0\ref\Veegan.Data.Access.dll
+C:\Users\Sirine\source\repos\Veeggan\Veegan.Data.Access\bin\Debug\net6.0\Veegan.Data.Access.runtimeconfig.json
+C:\Users\Sirine\source\repos\Veeggan\Veegan.Data.Access\obj\Debug\net6.0\Veegan.Data.Access.genruntimeconfig.cache

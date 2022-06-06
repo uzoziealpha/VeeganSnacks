@@ -1,0 +1,14 @@
+C:\Users\Sirine\source\repos\Veeggan\Vegan.Utility\bin\Debug\net6.0\Vegan.Utility.deps.json
+C:\Users\Sirine\source\repos\Veeggan\Vegan.Utility\bin\Debug\net6.0\Vegan.Utility.dll
+C:\Users\Sirine\source\repos\Veeggan\Vegan.Utility\bin\Debug\net6.0\Vegan.Utility.pdb
+C:\Users\Sirine\source\repos\Veeggan\Vegan.Utility\obj\Debug\net6.0\Vegan.Utility.csproj.AssemblyReference.cache
+C:\Users\Sirine\source\repos\Veeggan\Vegan.Utility\obj\Debug\net6.0\Vegan.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sirine\source\repos\Veeggan\Vegan.Utility\obj\Debug\net6.0\Vegan.Utility.AssemblyInfoInputs.cache
+C:\Users\Sirine\source\repos\Veeggan\Vegan.Utility\obj\Debug\net6.0\Vegan.Utility.AssemblyInfo.cs
+C:\Users\Sirine\source\repos\Veeggan\Vegan.Utility\obj\Debug\net6.0\Vegan.Utility.csproj.CoreCompileInputs.cache
+C:\Users\Sirine\source\repos\Veeggan\Vegan.Utility\obj\Debug\net6.0\Vegan.Utility.dll
+C:\Users\Sirine\source\repos\Veeggan\Vegan.Utility\obj\Debug\net6.0\refint\Vegan.Utility.dll
+C:\Users\Sirine\source\repos\Veeggan\Vegan.Utility\obj\Debug\net6.0\Vegan.Utility.pdb
+C:\Users\Sirine\source\repos\Veeggan\Vegan.Utility\obj\Debug\net6.0\ref\Vegan.Utility.dll
+C:\Users\Sirine\source\repos\Veeggan\Vegan.Utility\bin\Debug\net6.0\Vegan.Utility.runtimeconfig.json
+C:\Users\Sirine\source\repos\Veeggan\Vegan.Utility\obj\Debug\net6.0\Vegan.Utility.genruntimeconfig.cache
