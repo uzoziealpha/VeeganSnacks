@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Veegan.Data.Access.Repository.IRepository;
 using Vegan.DataAccess.Data;
 using Vegan.Models;
 
@@ -9,19 +10,26 @@ namespace Veeggan.Pages.Admin.FoodTypes;
 public class DeleteModel : PageModel
 {
 
+
+    private readonly IUnitOfWork _unitOfWork;
+
+    public IEnumerable<FoodType> FoodTypes { get; set; }    
+
     private readonly ApplicationDbContext _db;
     public FoodType FoodType { get; set; }
 
-    public DeleteModel(ApplicationDbContext db)
+    public DeleteModel(IUnitOfWork unitOfWork)
     {
-        _db = db;
+        _unitOfWork = unitOfWork;
     }
+
+
 
     // we pass the in id so it can match the CREATE.cshtml ID for editing 
     public void OnGet(int id)
     {
         //THESE ITEMS ARE USED TO RETURN VALUE OR NULL
-        FoodType = _db.FoodType.Find(id);
+        FoodType = _unitOfWork.FoodType.GetFirstOrDefault(u => u.Id == id);
         
         //Category = _db.Category.FirstOrDefault(u=>u.Id==id);
         //Category = _db.Category.SingleOrDefault(id);
@@ -34,13 +42,13 @@ public class DeleteModel : PageModel
     //We can create categories using Async 
     public async Task<IActionResult> OnPost()
     {
-        var foodTypeFromDb = _db.FoodType.Find(FoodType.Id);
-        if(foodTypeFromDb != null)
+        var foodTypeFromDb = _unitOfWork.FoodType.GetFirstOrDefault(u => u.Id == FoodType.Id);
+        if (foodTypeFromDb != null)
         {
             //we add .UPDATE keyword because its a post or patch request
             //    await _db.Category.AddAsync(Category);
-            _db.FoodType.Remove(foodTypeFromDb);
-            await _db.SaveChangesAsync();
+            _unitOfWork.FoodType.Remove(foodTypeFromDb);
+            _unitOfWork.Save();
             TempData["success"] = "Category deleted successfully";
             return RedirectToPage("Index");
         }

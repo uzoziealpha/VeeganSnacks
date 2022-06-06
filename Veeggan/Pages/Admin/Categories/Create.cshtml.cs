@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Veegan.Data.Access.Repository.IRepository;
 using Vegan.DataAccess.Data;
 using Vegan.Models;
 
@@ -8,17 +9,16 @@ namespace Veeggan.Pages.Admin.Categories;
 
 public class CreateModel : PageModel
 {
-    
 
-    private readonly ApplicationDbContext _db;
+    private readonly IUnitOfWork _unitOfWork;
+
 
     public Category Category { get; set; }
 
-    public CreateModel(ApplicationDbContext db)
+    public CreateModel(IUnitOfWork unitOfWork)
     {
-        _db = db; 
+        _unitOfWork = unitOfWork;
     }
-
 
     public void OnGet()
     {
@@ -38,8 +38,8 @@ public class CreateModel : PageModel
         //we do the server-side FORM vaidations with ModelState 
         if (ModelState.IsValid)
         {
-             await _db.Category.AddAsync(Category);
-            await _db.SaveChangesAsync();
+            _unitOfWork.Category.Add(Category);
+            _unitOfWork.Save();
             TempData["success"] = "Category created successfully";
             return RedirectToPage("Index");
         }
