@@ -23,7 +23,7 @@ namespace Veegan.Data.Access.Repository.IRepository
 
 
         //incase we wants to get a list of products
-        IEnumerable<T> GetAll();
+        IEnumerable<T> GetAll(string? includeProperties=null );
 
         //T is the generic key used in the repo
         T GetFirstOrDefault(Expression<Func<T, bool>>? filter = null);

@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veeggan", "Veeggan\Veeggan.csproj", "{39D95561-EA8A-49C6-85D8-F6FA600DFC09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Veeggan", "Veeggan\Veeggan.csproj", "{39D95561-EA8A-49C6-85D8-F6FA600DFC09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veegan.Data.Access", "Veegan.Data.Access\Veegan.Data.Access.csproj", "{08B763B3-CAD9-458F-B555-B52DF334535D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Veegan.Data.Access", "Veegan.Data.Access\Veegan.Data.Access.csproj", "{08B763B3-CAD9-458F-B555-B52DF334535D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vegan.Models", "Vegan.Models\Vegan.Models.csproj", "{62D9DFAE-812E-4889-9EFE-D2C780B916CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vegan.Models", "Vegan.Models\Vegan.Models.csproj", "{62D9DFAE-812E-4889-9EFE-D2C780B916CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vegan.Utility", "Vegan.Utility\Vegan.Utility.csproj", "{24267819-AEFA-4EA7-826E-C5F2402FC846}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vegan.Utility", "Vegan.Utility\Vegan.Utility.csproj", "{24267819-AEFA-4EA7-826E-C5F2402FC846}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

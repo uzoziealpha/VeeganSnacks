@@ -45,4 +45,6 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 
+// we add map controllers so we an use API to properly route 
+app.MapControllers();
 app.Run();

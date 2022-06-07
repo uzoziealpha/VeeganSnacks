@@ -18,6 +18,8 @@ namespace Veegan.Data.Access.Repository
         public Repository(ApplicationDbContext db)
         {
             _db = db;
+            // this will allows us to map FoodType and Categpry
+           _db.MenuItem.Include(u => u.FoodType).Include(u => u.Category);
             this.dbSet = db.Set<T>();
         }
 
@@ -28,10 +30,22 @@ namespace Veegan.Data.Access.Repository
             dbSet.Add(entity);
         }
 
-        public IEnumerable<T> GetAll()
+        public IEnumerable<T> GetAll(string? includeProperties=null)
         {
             // we will query all the items that we want to return
             IQueryable<T> query = dbSet;
+            if( includeProperties != null)
+            {
+
+                //
+                //adding properties for API call in MenuItems this will split our output abc,,xyz => to abc xyz
+                foreach(var includeProperty in includeProperties.Split(
+                    new char[] { ','}, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    //to include the things in the query
+                    query = query.Include(includeProperty);
+                }
+            }
             return query.ToList();
 
         }

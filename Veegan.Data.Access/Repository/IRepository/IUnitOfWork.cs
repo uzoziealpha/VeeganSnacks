@@ -14,6 +14,8 @@ namespace Veegan.Data.Access.Repository.IRepository
 
         IFoodTypeRepository FoodType { get; }
 
+        IMenuItemRepository MenuItem { get; }
+
         void Save();
     }
 }
