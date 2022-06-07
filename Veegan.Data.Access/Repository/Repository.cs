@@ -9,55 +9,65 @@ using Veegan.Data.Access.Repository.IRepository;
 using Vegan.DataAccess.Data;
 
 namespace Veegan.Data.Access.Repository
+
 {
     public class Repository<T> : IRepository<T> where T : class
     {
         private readonly ApplicationDbContext _db;
         internal DbSet<T> dbSet;
 
+
         public Repository(ApplicationDbContext db)
         {
             _db = db;
-            // this will allows us to map FoodType and Categpry
-           _db.MenuItem.Include(u => u.FoodType).Include(u => u.Category);
+            //FoodType
+            // _db.MenuItem.Include(u => u.FoodType).Include(u => u.Category);
+            //  _db.MenuItem.OrderBy(u => u.Name);
             this.dbSet = db.Set<T>();
         }
 
-
         public void Add(T entity)
         {
-            // to add new things in the DB with Repository
             dbSet.Add(entity);
         }
 
-        public IEnumerable<T> GetAll(string? includeProperties=null)
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null,
+             Func<IQueryable<T>, IOrderedQueryable<T>>? orderby = null,
+             string? includeProperties = null)
         {
-            // we will query all the items that we want to return
             IQueryable<T> query = dbSet;
-            if( includeProperties != null)
+            if (includeProperties != null)
             {
-
-                //
-                //adding properties for API call in MenuItems this will split our output abc,,xyz => to abc xyz
-                foreach(var includeProperty in includeProperties.Split(
-                    new char[] { ','}, StringSplitOptions.RemoveEmptyEntries))
+                foreach (var includeProperty in includeProperties.Split(
+                    new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
                 {
-                    //to include the things in the query
                     query = query.Include(includeProperty);
                 }
             }
-            return query.ToList();
+            if (orderby != null)
+            {
+                return orderby(query).ToList();
+            }
 
+            return query.ToList();
         }
 
-        public T GetFirstOrDefault(Expression<Func<T, bool>>? filter = null)
+        public T GetFirstOrDefault(Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
         {
-            // First Or Default uses Lambda Functions
             IQueryable<T> query = dbSet;
             if (filter != null)
             {
                 query = query.Where(filter);
             }
+            if (includeProperties != null)
+            {
+                foreach (var includeProperty in includeProperties.Split(
+                    new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProperty);
+                }
+            }
+
             return query.FirstOrDefault();
 
         }
@@ -65,7 +75,6 @@ namespace Veegan.Data.Access.Repository
         public void Remove(T entity)
         {
             dbSet.Remove(entity);
-
         }
 
         public void RemoveRange(IEnumerable<T> entity)

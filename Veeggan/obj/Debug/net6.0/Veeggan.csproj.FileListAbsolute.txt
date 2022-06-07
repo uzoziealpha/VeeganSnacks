@@ -270,3 +270,6 @@ C:\Users\Sirine\source\repos\Veeggan\Veeggan\bin\Debug\net6.0\Microsoft.AspNetCo
 C:\Users\Sirine\source\repos\Veeggan\Veeggan\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Sirine\source\repos\Veeggan\Veeggan\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\Sirine\source\repos\Veeggan\Veeggan\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Sirine\source\repos\Veeggan\Veeggan\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\Sirine\source\repos\Veeggan\Veeggan\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\Sirine\source\repos\Veeggan\Veeggan\obj\Debug\net6.0\Veeggan.MvcApplicationPartsAssemblyInfo.cs

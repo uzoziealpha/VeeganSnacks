@@ -51,7 +51,7 @@ function Delete(url) {
                         toastr.success(data.message);
                     }
                     else {
-                        //fail ure notification
+                        //failure notification
                         toastr.error(data.message);
                     }
                 }

@@ -8,24 +8,25 @@ using System.Threading.Tasks;
 namespace Veegan.Data.Access.Repository.IRepository
 {
     public interface IRepository<T> where T : class
-
-
     {
-        // Get ALL, GET BY ID First or DEFAULT , ADD, REMOVE , REMOVE RANGE
 
-        //these are the generic definitions
+        //GET ALL, GET BY ID FIRST OR DEFAULT , ADD, REMOVE, REMOVE RANGE 
 
         void Add(T entity);
+
 
         void Remove(T entity);
 
         void RemoveRange(IEnumerable<T> entity);
 
+        // adding api props
+        IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null,
+            Func<IQueryable<T>, IOrderedQueryable<T>>? orderby = null,
+            string? includeProperties = null);
 
-        //incase we wants to get a list of products
-        IEnumerable<T> GetAll(string? includeProperties=null );
 
-        //T is the generic key used in the repo
-        T GetFirstOrDefault(Expression<Func<T, bool>>? filter = null);
+
+        T GetFirstOrDefault(Expression<Func<T, bool>>? filter = null, string? includeProperties = null);
+
     }
 }
