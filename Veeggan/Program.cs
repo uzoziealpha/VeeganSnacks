@@ -32,6 +32,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
 // scope makes it limited to one per request
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+
+//this builder service allows the authorize in details page to work with videw details
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Identity/Account/Login";

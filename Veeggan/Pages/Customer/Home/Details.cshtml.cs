@@ -2,11 +2,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Claims;
 using Veegan.Data.Access.Repository.IRepository;
 using Vegan.Models;
 
 namespace Veeggan.Pages.Customer.Home
 {
+    //we add the authorize in details page so only registerted users are authorized
     [Authorize]
     public class DetailsModel : PageModel
     {
@@ -24,11 +26,29 @@ namespace Veeggan.Pages.Customer.Home
         public ShoppingCart ShoppingCart { get; set; }
         public void OnGet(int id)
         {
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
+            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+
             ShoppingCart = new()
             {
-                MenuItem = _unitOfWork.MenuItem.GetFirstOrDefault(u => u.Id == id, includeProperties: "Category,FoodType")
+                ApplicationUserId = claim.Value,
+                MenuItem = _unitOfWork.MenuItem.GetFirstOrDefault(u => u.Id == id, includeProperties: "Category,FoodType"),
+                MenuItemId = id
             };
         }
-    }
-       
+
+        public IActionResult OnPost()
+        {
+            if (ModelState.IsValid)
+            {
+                _unitOfWork.ShoppingCart.Add(ShoppingCart);
+                _unitOfWork.Save();
+                return RedirectToPage("Index");
+
+            }
+            return Page();
+
+        }
+
+    }  
 } 
