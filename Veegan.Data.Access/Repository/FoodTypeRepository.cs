@@ -4,8 +4,8 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Veegan.Data.Access.Data;
 using Veegan.Data.Access.Repository.IRepository;
-using Vegan.DataAccess.Data;
 using Vegan.Models;
 
 namespace Veegan.Data.Access.Repository

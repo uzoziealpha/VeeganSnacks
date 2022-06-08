@@ -3169,8 +3169,9 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.5",
-          "Microsoft.EntityFrameworkCore": "6.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.5",
+          "Microsoft.Extensions.Identity.Core": "6.0.5",
+          "Microsoft.Extensions.Identity.Stores": "6.0.5",
           "Vegan.Models": "1.0.0"
         },
         "compile": {
@@ -3183,11 +3184,27 @@
       "Vegan.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Stores": "6.0.5"
+        },
         "compile": {
           "bin/placeholder/Vegan.Models.dll": {}
         },
         "runtime": {
           "bin/placeholder/Vegan.Models.dll": {}
+        }
+      },
+      "Vegan.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "6.0.5"
+        },
+        "compile": {
+          "bin/placeholder/Vegan.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Vegan.Utility.dll": {}
         }
       }
     }
@@ -9862,6 +9879,11 @@
       "type": "project",
       "path": "../Vegan.Models/Vegan.Models.csproj",
       "msbuildProject": "../Vegan.Models/Vegan.Models.csproj"
+    },
+    "Vegan.Utility/1.0.0": {
+      "type": "project",
+      "path": "../Vegan.Utility/Vegan.Utility.csproj",
+      "msbuildProject": "../Vegan.Utility/Vegan.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -9874,7 +9896,8 @@
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.5",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.5",
       "Veegan.Data.Access >= 1.0.0",
-      "Vegan.Models >= 1.0.0"
+      "Vegan.Models >= 1.0.0",
+      "Vegan.Utility >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -9909,6 +9932,9 @@
             },
             "C:\\Users\\Sirine\\source\\repos\\Veeggan\\Vegan.Models\\Vegan.Models.csproj": {
               "projectPath": "C:\\Users\\Sirine\\source\\repos\\Veeggan\\Vegan.Models\\Vegan.Models.csproj"
+            },
+            "C:\\Users\\Sirine\\source\\repos\\Veeggan\\Vegan.Utility\\Vegan.Utility.csproj": {
+              "projectPath": "C:\\Users\\Sirine\\source\\repos\\Veeggan\\Vegan.Utility\\Vegan.Utility.csproj"
             }
           }
         }

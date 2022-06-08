@@ -9,9 +9,10 @@
       "Veegan.Data.Access/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.5",
-          "Microsoft.EntityFrameworkCore": "6.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.5",
+          "Microsoft.Extensions.Identity.Core": "6.0.5",
+          "Microsoft.Extensions.Identity.Stores": "6.0.5",
           "Vegan.Models": "1.0.0"
         },
         "runtime": {
@@ -543,6 +544,9 @@
         }
       },
       "Vegan.Models/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Stores": "6.0.5"
+        },
         "runtime": {
           "Vegan.Models.dll": {}
         }

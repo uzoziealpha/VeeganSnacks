@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rkjsRlNtI5QQmVJ8PyLrMGYzCwVHzMrKPV0UIejjTRo=",
+  "Hash": "6oeLLm5k4iqSFYMbM7AVRAKDBysHdjoxI4ad+LuMIR4=",
   "Source": "Veeggan",
   "BasePath": "_content/Veeggan",
   "Mode": "Default",
@@ -1224,6 +1224,23 @@
       "OriginalItemSpec": "wwwroot\\images\\menuItems\\14b7b025-f3cb-4198-918c-cac1aaf574f8.jpg"
     },
     {
+      "Identity": "C:\\Users\\Sirine\\source\\repos\\Veeggan\\Veeggan\\wwwroot\\images\\menuItems\\265fd1ee-ec4a-4009-a552-0591f50b96a8.jpg",
+      "SourceId": "Veeggan",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Sirine\\source\\repos\\Veeggan\\Veeggan\\wwwroot\\",
+      "BasePath": "_content/Veeggan",
+      "RelativePath": "images/menuItems/265fd1ee-ec4a-4009-a552-0591f50b96a8.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\menuItems\\265fd1ee-ec4a-4009-a552-0591f50b96a8.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Sirine\\source\\repos\\Veeggan\\Veeggan\\wwwroot\\images\\menuItems\\bc5b64dc-f917-4314-a591-6ffc75b0a507.jpg",
       "SourceId": "Veeggan",
       "SourceType": "Discovered",
@@ -1239,6 +1256,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\menuItems\\bc5b64dc-f917-4314-a591-6ffc75b0a507.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Sirine\\source\\repos\\Veeggan\\Veeggan\\wwwroot\\images\\menuItems\\c0dc1fe0-7c7d-4b37-a136-65d8e466cf5e.jpg",
+      "SourceId": "Veeggan",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Sirine\\source\\repos\\Veeggan\\Veeggan\\wwwroot\\",
+      "BasePath": "_content/Veeggan",
+      "RelativePath": "images/menuItems/c0dc1fe0-7c7d-4b37-a136-65d8e466cf5e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\menuItems\\c0dc1fe0-7c7d-4b37-a136-65d8e466cf5e.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Sirine\\source\\repos\\Veeggan\\Veeggan\\wwwroot\\images\\menuItems\\ccdeb27f-7073-4576-a384-d6fef9d189cf.jpg",
+      "SourceId": "Veeggan",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Sirine\\source\\repos\\Veeggan\\Veeggan\\wwwroot\\",
+      "BasePath": "_content/Veeggan",
+      "RelativePath": "images/menuItems/ccdeb27f-7073-4576-a384-d6fef9d189cf.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\menuItems\\ccdeb27f-7073-4576-a384-d6fef9d189cf.jpg"
     },
     {
       "Identity": "C:\\Users\\Sirine\\source\\repos\\Veeggan\\Veeggan\\wwwroot\\images\\menuItems\\fe06f6e3-776c-4b47-b1fe-f0dfec4c7419.jpg",

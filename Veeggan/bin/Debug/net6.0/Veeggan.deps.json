@@ -16,7 +16,8 @@
           "Microsoft.EntityFrameworkCore.Tools": "6.0.5",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.5",
           "Veegan.Data.Access": "1.0.0",
-          "Vegan.Models": "1.0.0"
+          "Vegan.Models": "1.0.0",
+          "Vegan.Utility": "1.0.0"
         },
         "runtime": {
           "Veeggan.dll": {}
@@ -2307,8 +2308,9 @@
       "Veegan.Data.Access/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.5",
-          "Microsoft.EntityFrameworkCore": "6.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.5",
+          "Microsoft.Extensions.Identity.Core": "6.0.5",
+          "Microsoft.Extensions.Identity.Stores": "6.0.5",
           "Vegan.Models": "1.0.0"
         },
         "runtime": {
@@ -2316,8 +2318,19 @@
         }
       },
       "Vegan.Models/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Stores": "6.0.5"
+        },
         "runtime": {
           "Vegan.Models.dll": {}
+        }
+      },
+      "Vegan.Utility/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "6.0.5"
+        },
+        "runtime": {
+          "Vegan.Utility.dll": {}
         }
       }
     }
@@ -3587,6 +3600,11 @@
       "sha512": ""
     },
     "Vegan.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Vegan.Utility/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

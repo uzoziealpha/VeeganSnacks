@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Veegan.Data.Access.Data;
 using Veegan.Data.Access.Repository.IRepository;
-using Vegan.DataAccess.Data;
 
 namespace Veegan.Data.Access.Repository
 {

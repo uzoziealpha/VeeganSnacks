@@ -1,6 +1,6 @@
- using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Vegan.DataAccess.Data;
+using Veegan.Data.Access.Data;
 using Vegan.Models;
 
 namespace Veeggan.Pages.Admin.MenuItems;

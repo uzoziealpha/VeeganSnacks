@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Veegan.Data.Access.Data;
 using Veegan.Data.Access.Repository.IRepository;
-using Vegan.DataAccess.Data;
 using Vegan.Models;
 
 namespace Veeggan.Pages.Admin.FoodTypes;

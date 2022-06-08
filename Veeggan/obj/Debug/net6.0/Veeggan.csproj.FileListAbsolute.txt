@@ -273,3 +273,5 @@ C:\Users\Sirine\source\repos\Veeggan\Veeggan\bin\Debug\net6.0\Microsoft.Extensio
 C:\Users\Sirine\source\repos\Veeggan\Veeggan\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\Users\Sirine\source\repos\Veeggan\Veeggan\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\Sirine\source\repos\Veeggan\Veeggan\obj\Debug\net6.0\Veeggan.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Sirine\source\repos\Veeggan\Veeggan\bin\Debug\net6.0\Vegan.Utility.dll
+C:\Users\Sirine\source\repos\Veeggan\Veeggan\bin\Debug\net6.0\Vegan.Utility.pdb
