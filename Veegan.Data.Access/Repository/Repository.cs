@@ -21,7 +21,7 @@ namespace Veegan.Data.Access.Repository
         {
             _db = db;
             //FoodType
-            // _db.MenuItem.Include(u => u.FoodType).Include(u => u.Category);
+          //  _db.ShoppingCart.Include(u => u.MenuItem).ThenInclude(u => u.Category);
             //  _db.MenuItem.OrderBy(u => u.Name);
             this.dbSet = db.Set<T>();
         }

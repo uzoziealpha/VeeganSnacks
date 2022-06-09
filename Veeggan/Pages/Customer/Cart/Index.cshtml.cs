@@ -14,10 +14,13 @@ namespace Veeggan.Pages.Customer.Cart
 
         public IEnumerable<ShoppingCart> ShoppingCartList { get; set; }
 
+        public double CartTotal { get; set; }
+
         private readonly IUnitOfWork _unitOfWork; 
         public IndexModel(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
+            CartTotal = 0;
         }
         public void OnGet()
         {
@@ -26,7 +29,12 @@ namespace Veeggan.Pages.Customer.Cart
             var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
             if (claim != null)
             {
-                ShoppingCartList = _unitOfWork.ShoppingCart.GetAll(filter: u => u.ApplicationUserId == claim.Value);
+                ShoppingCartList = _unitOfWork.ShoppingCart.GetAll(filter: u => u.ApplicationUserId == claim.Value,
+                    includeProperties:"MenuItem,MenuItem.FoodType,MenuItem.Category");
+                foreach(var cartItem in ShoppingCartList)
+                {
+                    CartTotal += (cartItem.MenuItem.Price * cartItem.Count);
+                }
             }
         }
     }

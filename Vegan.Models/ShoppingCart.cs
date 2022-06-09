@@ -17,7 +17,6 @@ namespace Vegan.Models
 
         public int MenuItemId { get; set;}
         [ForeignKey("MenuItemId")]
-        [NotMapped]
         [ValidateNever]
 
 
@@ -28,7 +27,6 @@ namespace Vegan.Models
 
         public string ApplicationUserId { get; set; }
         [ForeignKey("ApplicationUserId")]
-        [NotMapped]
         [ValidateNever]
 
 
