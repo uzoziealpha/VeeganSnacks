@@ -33,10 +33,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Customer\Cart\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="Pages\Customer\Home\Details.cshtml" />
   </ItemGroup>
 

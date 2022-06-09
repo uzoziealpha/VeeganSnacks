@@ -9,10 +9,9 @@ namespace Veegan.Data.Access.Repository.IRepository
 {
      public interface IShoppingCartRepository : IRepository<ShoppingCart>
     {
+        int IncrementCount(ShoppingCart shoppingCart, int count);   
+        int DecrementCount(ShoppingCart shoppingCart, int count);   
 
-        //we add the interface of update in a new folder
-        void Update(ShoppingCart obj);
-      //  void Save();
-      // We can't save or repos here we use a unit of work 
+
     }
 }

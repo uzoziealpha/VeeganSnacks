@@ -19,9 +19,18 @@ namespace Veegan.Data.Access.Repository
             _db = db;
         }
 
-        public void Update(ShoppingCart obj)
+        public int DecrementCount(ShoppingCart shoppingCart, int count)
         {
-            throw new NotImplementedException();
+            shoppingCart.Count -= count;
+            _db.SaveChanges();
+            return shoppingCart.Count;
+        }
+
+        public int IncrementCount(ShoppingCart shoppingCart, int count)
+        {
+            shoppingCart.Count += count;
+            _db.SaveChanges();
+            return shoppingCart.Count;
         }
     }
 }
