@@ -16,6 +16,9 @@ namespace Veegan.Data.Access.Repository.IRepository
 
         IMenuItemRepository MenuItem { get; }
         IShoppingCartRepository ShoppingCart { get; }
+        IOrderHeaderRepository OrderHeader { get; }
+        IOrderDetailRepository OrderDetail { get; }
+        IApplicationUserRepository ApplicationUser { get; }
 
         void Save();
     }

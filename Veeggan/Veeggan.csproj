@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Content Remove="Details.cshtml" />
+    <Content Remove="Pages\Customer\Summary.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +35,14 @@
 
   <ItemGroup>
     <None Include="Pages\Customer\Home\Details.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Customer\Summary.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Customer\Summary.cshtml" />
   </ItemGroup>
 
 </Project>

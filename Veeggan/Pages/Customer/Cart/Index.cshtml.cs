@@ -58,6 +58,8 @@ namespace Veeggan.Pages.Customer.Cart
             }
             return RedirectToPage("/Customer/Cart/Index");
         }
+
+        //remove and decrement a shopping cart
         public IActionResult OnPostRemove(int cartId)
         {
             var cart = _unitOfWork.ShoppingCart.GetFirstOrDefault(u => u.Id == cartId);
