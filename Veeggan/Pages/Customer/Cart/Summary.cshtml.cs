@@ -120,7 +120,7 @@ namespace Veeggan.Pages.Customer.Cart
                 Session session = service.Create(options);
                 Response.Headers.Add("Location", session.Url);
 
-              //  OrderHeader.SessionId = session.Id;
+                OrderHeader.SessionId = session.Id;
                 OrderHeader.PaymentIntentId = session.PaymentIntentId;
                 _unitOfWork.Save();
                 return new StatusCodeResult(303);

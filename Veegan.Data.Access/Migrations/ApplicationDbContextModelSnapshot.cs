@@ -365,11 +365,11 @@ namespace Veegan.Data.Access.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
+                    b.Property<string>("SessionId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TransactionId")
+                    b.Property<string>("Status")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")

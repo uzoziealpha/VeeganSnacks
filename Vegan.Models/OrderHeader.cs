@@ -36,7 +36,7 @@ namespace Vegan.Models
 
 		public string? Comments { get; set; }
 
-		public string? TransactionId { get; set; }
+		public string? SessionId { get; set; }
 		public string? PaymentIntentId { get; set; }
 
 		[Display(Name = "Pickup Name")]

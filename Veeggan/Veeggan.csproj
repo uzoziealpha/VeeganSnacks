@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Content Remove="Details.cshtml" />
+    <Content Remove="Pages\Customer\Cart\OrderConfirmationModel.cshtml" />
     <Content Remove="Pages\Customer\Summary.cshtml" />
   </ItemGroup>
 
@@ -35,6 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Pages\Customer\Cart\OrderConfirmationModel.cshtml" />
     <None Include="Pages\Customer\Home\Details.cshtml" />
   </ItemGroup>
 
@@ -43,7 +45,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Customer\Cart\OrderConfirmationModel.cshtml" />
     <_ContentIncludedByDefault Remove="Pages\Customer\Summary.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Customer\Cart\OrderConfirmationModel.cshtml" />
   </ItemGroup>
 
 </Project>
