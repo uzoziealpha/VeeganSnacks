@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Veegan.Data.Access.Data;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Vegan.Utility;
+using Stripe;
 
 
 // THIS IS THE CONTAINER 
@@ -19,7 +20,7 @@ var builder = WebApplication.CreateBuilder(args);
 //    options.UseSqlServer(connectionString));;
 
 
-
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
@@ -29,10 +30,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
        builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 
+
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
 // scope makes it limited to one per request
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
 
 //this builder service allows the authorize in details page to work with videw details
 builder.Services.ConfigureApplicationCookie(options =>
@@ -60,6 +61,10 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+string key = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
+StripeConfiguration.ApiKey = key;
+
 app.UseAuthentication(); ;
 
 app.UseAuthorization();

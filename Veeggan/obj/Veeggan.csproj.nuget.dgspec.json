@@ -65,6 +65,10 @@
             "Microsoft.Extensions.Identity.Stores": {
               "target": "Package",
               "version": "[6.0.5, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[39.118.0, )"
             }
           },
           "imports": [
@@ -163,6 +167,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.5, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[39.118.0, )"
             }
           },
           "imports": [
@@ -236,6 +244,10 @@
             "Microsoft.Extensions.Identity.Stores": {
               "target": "Package",
               "version": "[6.0.5, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[39.118.0, )"
             }
           },
           "imports": [
@@ -302,6 +314,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.5, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[39.118.0, )"
             }
           },
           "imports": [

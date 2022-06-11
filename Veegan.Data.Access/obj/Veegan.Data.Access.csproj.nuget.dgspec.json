@@ -65,6 +65,10 @@
             "Microsoft.Extensions.Identity.Stores": {
               "target": "Package",
               "version": "[6.0.5, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[39.118.0, )"
             }
           },
           "imports": [
@@ -135,6 +139,10 @@
             "Microsoft.Extensions.Identity.Stores": {
               "target": "Package",
               "version": "[6.0.5, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[39.118.0, )"
             }
           },
           "imports": [

@@ -20,6 +20,7 @@ namespace Veegan.Data.Access.Repository.IRepository
         IOrderDetailRepository OrderDetail { get; }
         IApplicationUserRepository ApplicationUser { get; }
 
+
         void Save();
     }
 }

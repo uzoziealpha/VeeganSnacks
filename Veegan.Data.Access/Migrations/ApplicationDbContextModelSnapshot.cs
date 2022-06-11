@@ -351,16 +351,19 @@ namespace Veegan.Data.Access.Migrations
                     b.Property<double>("OrderTotal")
                         .HasColumnType("float");
 
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
+                    b.Property<string>("PaymentIntentId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PickUpName")
+                    b.Property<string>("PhoneNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("PickUpTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("PickupName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Status")
                         .IsRequired()
