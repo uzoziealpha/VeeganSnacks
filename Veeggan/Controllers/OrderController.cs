@@ -19,11 +19,11 @@ namespace Veeggan.Controllers
         [Authorize]
         public IActionResult Get()
         {
-            var OrderHeaderList = _unitOfWork.OrderHeader.GetAll(includeProperties:"ApplicationUser");
+            var OrderHeaderList = _unitOfWork.OrderHeader.GetAll(includeProperties: "ApplicationUser");
             return Json(new { data = OrderHeaderList });
         }
 
 
-       
+
     }
 }

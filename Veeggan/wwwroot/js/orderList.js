@@ -11,14 +11,13 @@ $(document).ready(function () {
             { "data": "pickupName", "width": "15%" },
             { "data": "applicationUser.email", "width": "15%" },
             { "data": "orderTotal", "width": "15%" },
-            { "data": "pickUpTime", "width": "15%" },
+            { "data": "pickUpTime", "width": "25%" },
             {
                 "data": "id",
                 "render": function (data) {
                     return `<div class="w-75 btn-group" >
                       
-
-                            <a href=""  class="btn btn-success text-white mx-2">                            
+                            <a href="/Order/OrderDetails?id=${data}"  class="btn btn-success text-white mx-2">                            
                             <i class="bi bi-pencil-square"></i>  </a>
                             </div>`
                 },
@@ -60,4 +59,4 @@ function Delete(url) {
         }
     })
 
-}
+ }
