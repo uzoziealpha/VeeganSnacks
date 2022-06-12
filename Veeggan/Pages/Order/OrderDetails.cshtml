@@ -69,22 +69,22 @@
             <div class="col-lg-4 col-12">
                 <h4 class="d-flex justify-content-between align-content-center mb-3">
                     <span class="text-muted">Order ID: </span>
-                    <span class="badge badge-secondary badge-pill">XXX</span>
+                    <span class="badge badge-secondary badge-pill">@Model.OrderDetailVM.OrderHeader.Id</span>
                 </h4>
                 <ul class="list-group mb-3">
-                    
+                    @foreach(var detail in Model.OrderDetailVM.OrderDetails){
                         <li class="list-group-item d-flex justify-content-between">
                             <div>
-                                <h6 class="my-0">XXNAMEXX</h6>
-                                <small class="text-muted">Quantity : XXCountXX</small>
+                                <h6 class="my-0">@detail.Name</h6>
+                                <small class="text-muted">Quantity : @detail.Count</small>
                             </div>
-                            <span class="text-muted">$$$</span>
+                            <span class="text-muted">$@(detail.Price*detail.Count)</span>
                         </li>
-                    
+                    }
 
                     <li class="list-group-item d-flex justify-content-between bg-light">
                         <span class="text-info"> Total (USD)</span>
-                        <strong class="text-info">$$$$$</strong>
+                        <strong class="text-info">@Model.OrderDetailVM.OrderHeader.OrderTotal</strong>
                     </li>
 
                 </ul>

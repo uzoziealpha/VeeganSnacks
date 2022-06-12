@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Content Remove="Details.cshtml" />
-    <Content Remove="Pages\Customer\Cart\OrderConfirmation.cshtml" />
     <Content Remove="Pages\Customer\Summary.cshtml" />
   </ItemGroup>
 
