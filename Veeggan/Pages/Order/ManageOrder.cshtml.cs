@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Veegan.Data.Access.Repository.IRepository;
@@ -7,6 +8,7 @@ using Vegan.Utility;
 
 namespace Veeggan.Pages.Order
 {
+    [Authorize(Roles = $"{SD.ManagerRole}, {SD.KitchenRole}")]
     public class ManageOrderModel : PageModel
     {
 
@@ -39,5 +41,31 @@ namespace Veeggan.Pages.Order
                 OrderDetailVM.Add(individual);
             }
         }
+
+        public IActionResult OnPostOrderInProcess(int orderId)
+        {
+            _unitOfWork.OrderHeader.UpdateStatus(orderId, SD.StatusInProcess);
+            _unitOfWork.Save();
+            return RedirectToPage("ManageOrder");
+
+        }    
+        
+        
+        public IActionResult OnPostOrderReady(int orderId)
+        {
+            _unitOfWork.OrderHeader.UpdateStatus(orderId, SD.StatusReady);
+            _unitOfWork.Save();
+            return RedirectToPage("ManageOrder");
+        }
+
+         public IActionResult OnPostOrderCancel(int orderId)
+        {
+            _unitOfWork.OrderHeader.UpdateStatus(orderId, SD.StatusCancelled);
+            _unitOfWork.Save();
+            return RedirectToPage("ManageOrder");
+        }
+
+
+
     }
 }
