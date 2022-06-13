@@ -50,7 +50,7 @@ namespace Veeggan.Pages.Customer.Cart
 
                 _unitOfWork.ShoppingCart.Remove(cart);
                 _unitOfWork.Save();
-               // HttpContext.Session.SetInt32(SD.SessionCart, count);
+                HttpContext.Session.SetInt32(SD.SessionCart, count);
             }
             else
             {
@@ -69,7 +69,7 @@ namespace Veeggan.Pages.Customer.Cart
 
             _unitOfWork.ShoppingCart.Remove(cart);
             _unitOfWork.Save();
-         //   HttpContext.Session.SetInt32(SD.SessionCart, count);
+            HttpContext.Session.SetInt32(SD.SessionCart, count);
             return RedirectToPage("/Customer/Cart/Index");
         }
 

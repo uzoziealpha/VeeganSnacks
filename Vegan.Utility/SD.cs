@@ -24,5 +24,8 @@ namespace Vegan.Utility
         public const string StatusCancelled = "Cancelled";
         public const string StatusRefunded = "Refunded";
 
+        //Adding sessions for Carts
+        public const string SessionCart = "SessionCart";
+
     }
 }

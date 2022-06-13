@@ -8,6 +8,28 @@
     var inProcess = "text-primary";
     var ready="text-primary";
 
+    if (status == "cancelled")
+    {
+        cancelled = "active text-white";
+    }
+    else
+    {
+        if (status == "completed")
+        {
+            completed = "active text-white";
+        }
+        else
+        {
+            if (status == "ready")
+            {
+                ready = "active text-white";
+            }
+            else
+            {
+                inProcess = "active text-white";
+            }
+        }
+    }
 
 }
 

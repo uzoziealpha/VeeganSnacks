@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 using Veegan.Data.Access.Repository.IRepository;
 using Vegan.Models;
+using Vegan.Utility;
 
 namespace Veeggan.Pages.Customer.Home
 {
@@ -50,6 +51,9 @@ namespace Veeggan.Pages.Customer.Home
                 {
                     _unitOfWork.ShoppingCart.Add(ShoppingCart);
                     _unitOfWork.Save();
+                    //Adding sessions to easily retrieve stored data
+                    HttpContext.Session.SetInt32(SD.SessionCart, 
+                        _unitOfWork.ShoppingCart.GetAll(u => u.ApplicationUserId == ShoppingCart.ApplicationUserId).ToList().Count);
                 }
                 else
                 {
